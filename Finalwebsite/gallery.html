@@ -1,171 +1,126 @@
+
 <!DOCTYPE html>
 <html>
-    
-    <head>
-<link rel="stylesheet"
-href="style.css">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add styles for the menu button */
+        .menu-button {
+            cursor: pointer;
+            display: inline-block;
+        }
 
+        .menu-button div {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
 
+        .change .bar4 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
 
+        .change .bar5 {
+            opacity: 0;
+        }
 
+        .change .bar6 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        .menu-subs {
+            display: none;
+        }
+
+        .menu-subs.show {
+            display: block;
+        }
+
+        /* Basic styles for body and footer */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .gallerytext {
+            text-align: center;
+        }
+
+        .h1-lessons h1 {
+            text-align: center;
+        }
+
+        .vali {
+            height: 200px;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="top-section top-section-lessons" onclick="myFunction(this)">
+    <div class="top-section top-section-lessons" onclick="myFunction()">
         <div class="menu-button">
             <div class="bar4"></div>
             <div class="bar5"></div>
             <div class="bar6"></div>
-     
-          </div> 
-          <div class="menu-subs" id="menu">
+        </div> 
+        <div class="menu-subs" id="menu">
             <ul>
-                    
-            
-           <li> <a href="lessons.html" class="menu-link-lessons">Lessons</a> </li>
-          
-           <li>  <a href="contact.html" class="menu-link-lessons">Contact</a></li>
-            
-           <li><a href="gallery.html" class="menu-link-lessons">Gallery </a></li>
+                <li><a href="lessons.html" class="menu-link-lessons">Lessons</a></li>
+                <li><a href="contact.html" class="menu-link-lessons">Contact</a></li>
+                <li><a href="gallery.html" class="menu-link-lessons">Gallery</a></li>
             </ul>
-            </div>
-  
+        </div>
 
+        <div class="h1-lessons"> 
+            <a href="index.html">
+                <h1>Point Break Surfing</h1>
+            </a>
+        </div>
+    </div>
 
-            <div class="h1-lessons"> 
-                <a href="index.html">
-                    <h1>Point Break Surfing</h1>
-                </a>
-                </div>
-    
-            </div>
-    
     <script>
-        function myFunction(x) {
-              x.classList.toggle("change");
-             
-                 }
-       </script> 
+        function myFunction() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
 
-       <div class="gallerytext">
-       <h5>Gallery</h5>
+            var button = document.querySelector(".menu-button");
+            button.classList.toggle("change");
+        }
+    </script>
+
+    <div class="gallerytext">
+        <h5>Gallery</h5>
     </div>
 
+    <img class="surfvan2" src="surfvan.jpg" alt="auto" width="500px">
 
-<img class="surfvan2" src="surfvan.jpg" alt="auto" width="500px">
+    <div class="vali"></div>
 
-<div class="vali"> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
+    <img class="surfer" src="surfer.jpg" alt="suffaaja" width="500px">
+    <div class="vali"></div>
 
+    <img class="koira" src="surfdog.jpg" alt="koira" width="500px">
 
-
-<img class="surfer" src="surfer.jpg" alt="suffaaja"width="500px">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<img class="koira" src="surfdog.jpg" alt="koira"
-width="500px">
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<footer>
-    <div class="footerh1">
-        <p>Point Break Surfing</p>
-    </div>
-    
-    <p>PO box</p> <p>Ulrica Ul 57</p>
-    <br>
-    
-    <p>pointbreak.contact@pointbreak.com</p>
-    <p>+5800434697</p>
-</footer>
-
-
+    <footer>
+        <div class="footerh1">
+            <p>Point Break Surfing</p>
+        </div>
+        <p>PO Box</p> 
+        <p>Ulrica Ul 57</p>
+        <p>pointbreak.contact@pointbreak.com</p>
+        <p>+5800434697</p>
+    </footer>
 </body>
-
-
 </html>
